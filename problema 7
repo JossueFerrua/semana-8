@@ -1,0 +1,36 @@
+using System;
+
+class Program
+{
+    // Método con paso por valor
+    static void incremento1(int n1)
+    {
+        n1 += 10;
+        Console.WriteLine("Dentro de incremento1 (por valor), n1 = " + n1);
+    }
+
+    // Método con paso por referencia
+    static void incremento2(ref int n1)
+    {
+        n1 += 10;
+        Console.WriteLine("Dentro de incremento2 (por referencia), n1 = " + n1);
+    }
+
+    static void Main(string[] args)
+    {
+        int a = 10;
+        int b = 10;
+
+        Console.WriteLine("Valor inicial de a: " + a);
+        Console.WriteLine("Valor inicial de b: " + b);
+
+        incremento1(a); // paso por valor
+        incremento2(ref b); // paso por referencia
+
+        Console.WriteLine("\nDespués de llamar a las funciones:");
+        Console.WriteLine("a = " + a + " (no cambia, porque se pasó por valor)");
+        Console.WriteLine("b = " + b + " (cambia, porque se pasó por referencia)");
+
+        Console.ReadKey();
+    }
+}
