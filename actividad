@@ -1,1 +1,75 @@
 ejercicios de prueba
+
+Ejemplo 2:
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Entrada de datos
+        Console.Write("Ingrese un número base: ");
+        int baseNum = int.Parse(Console.ReadLine());
+
+        Console.Write("Ingrese el exponente: ");
+        int exponente = int.Parse(Console.ReadLine());
+
+        // Llamamos al método y guardamos el resultado
+        int resultado = Potencia(baseNum, exponente);
+
+        // Mostramos el resultado
+        Console.WriteLine($"\n{baseNum} elevado a la {exponente} es: {resultado}");
+
+        Console.ReadKey();
+    }
+
+    // Método que calcula la potencia
+    static int Potencia(int baseNum, int exponente)
+    {
+        int resultado = 1;
+
+        for (int i = 1; i <= exponente; i++)
+        {
+            resultado *= baseNum; // multiplica baseNum consigo mismo 'exponente' veces
+        }
+
+        return resultado; // retorna el resultado al Main
+    }
+}
+
+
+Ejemplo 3:
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Entrada de datos
+        Console.Write("Ingrese un número natural: ");
+        int numero = int.Parse(Console.ReadLine());
+
+        // Llamamos al método factorial
+        long resultado = Factorial(numero);
+
+        // Mostramos el resultado
+        Console.WriteLine($"\nEl factorial de {numero} es: {resultado}");
+
+        Console.ReadKey();
+    }
+
+    // Método que calcula el factorial de un número
+    static long Factorial(int n)
+    {
+        long resultado = 1;
+
+        for (int i = 1; i <= n; i++)
+        {
+            resultado *= i;
+        }
+
+        return resultado; // Retorna el resultado al Main
+    }
+}
