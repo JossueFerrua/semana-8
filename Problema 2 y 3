@@ -73,3 +73,4 @@ class Program
         return resultado; // Retorna el resultado al Main
     }
 }
+
